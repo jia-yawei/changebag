@@ -37,7 +37,7 @@ class ImageProcessor(QMainWindow):
         elif self.ui.radioButton_blue.isChecked():
             new_color = (255, 0, 0)
         else:
-            # 如果没有选中任何按钮，默认为白色背景
+            # 默认为白色背景
             new_color = (255, 255, 255)
         new_color_bgr = np.uint8([[new_color]])  # 将new_color转换为正确的形状
         new_color_hsv = cv2.cvtColor(new_color_bgr, cv2.COLOR_BGR2HSV)[0][0]
